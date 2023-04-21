@@ -52,7 +52,7 @@ const Dashboard = () => {
           <div>
             <Map
               width='98.7%'
-              height='100%'
+              height={400}
               defaultState={{ center: [41.311151, 69.279737], zoom: 6 }}>
               <Placemark
                 geometry={[41.311151, 69.279737]}
