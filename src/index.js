@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
-
+import { Provider } from 'react-redux';
+import store from './config/redux/store';
+import { apiSlice } from './config/redux/reducers/apiSlice'
+import { ApiProvider } from '@reduxjs/toolkit/query/react'
+import { BrowserRouter as Router } from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store} >
+      <ApiProvider api={apiSlice}>
+        <Router>
+          <App />
+        </Router>
+      </ApiProvider>
+    </Provider>
   </React.StrictMode>
 );
 
