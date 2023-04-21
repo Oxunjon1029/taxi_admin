@@ -51,7 +51,7 @@ const Dashboard = () => {
         <YMaps>
           <div>
             <Map
-              width='98.7%'
+              width='100%'
               height='100%'
               defaultState={{ center: [41.311151, 69.279737], zoom: 6 }}>
               <Placemark
